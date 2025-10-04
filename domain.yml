@@ -1,0 +1,27 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_attendance
+
+entities:
+  - month
+
+slots:
+  month:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: month
+
+responses:
+  utter_greet:
+    - text: "Hello! I can help you check your monthly attendance."
+  utter_goodbye:
+    - text: "Goodbye! Stay productive."
+  utter_ask_month:
+    - text: "Which month would you like to check attendance?"
+
+actions:
+  - action_check_attendance

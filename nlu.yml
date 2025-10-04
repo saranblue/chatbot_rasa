@@ -1,0 +1,231 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - talk to you later
+    - catch you later
+
+
+
+
+
+
+
+- intent: check_attendance
+  examples: |
+    # January
+    - check my attendance for [January](month)
+    - show me my [January](month) report
+    - how many days did I attend in [January](month)
+    - give me my [January](month) attendance
+    - I want my [January](month) attendance details
+
+    # February
+    - check my attendance for [February](month)
+    - show me my [February](month) report
+    - how many days did I attend in [February](month)
+    - give me my [February](month) attendance
+    - I want my [February](month) attendance details
+
+    # March
+    - check my attendance for [March](month)
+    - show me my [March](month) report
+    - how many days did I attend in [March](month)
+    - give me my [March](month) attendance
+    - I want my [March](month) attendance details
+
+    # April
+    - check my attendance for [April](month)
+    - show me my [April](month) report
+    - how many days did I attend in [April](month)
+    - give me my [April](month) attendance
+    - I want my [April](month) attendance details
+
+    # May
+    - check my attendance for [May](month)
+    - show me my [May](month) report
+    - how many days did I attend in [May](month)
+    - give me my [May](month) attendance
+    - I want my [May](month) attendance details
+
+    # June
+    - check my attendance for [June](month)
+    - show me my [June](month) report
+    - how many days did I attend in [June](month)
+    - give me my [June](month) attendance
+    - I want my [June](month) attendance details
+
+    # July
+    - check my attendance for [July](month)
+    - show me my [July](month) report
+    - how many days did I attend in [July](month)
+    - give me my [July](month) attendance
+    - I want my [July](month) attendance details
+
+    # August
+    - check my attendance for [August](month)
+    - show me my [August](month) report
+    - how many days did I attend in [August](month)
+    - give me my [August](month) attendance
+    - I want my [August](month) attendance details
+
+    # September
+    - check my attendance for [September](month)
+    - show me my [September](month) report
+    - how many days did I attend in [September](month)
+    - give me my [September](month) attendance
+    - I want my [September](month) attendance details
+
+    # October
+    - check my attendance for [October](month)
+    - show me my [October](month) report
+    - how many days did I attend in [October](month)
+    - give me my [October](month) attendance
+    - I want my [October](month) attendance details
+
+    # November
+    - check my attendance for [November](month)
+    - show me my [November](month) report
+    - how many days did I attend in [November](month)
+    - give me my [November](month) attendance
+    - I want my [November](month) attendance details
+
+    # December
+    - check my attendance for [December](month)
+    - show me my [December](month) report
+    - how many days did I attend in [December](month)
+    - give me my [December](month) attendance
+    - I want my [December](month) attendance details
+
+    # Month abbreviations / numbers
+    - check my attendance for [Jan](month)
+    - show me my [Feb](month) report
+    - give me my [Mar](month) attendance
+    - attendance in [Apr](month)
+    - show [May](month) attendance
+    - check [Jun](month) attendance
+    - give me [Jul](month) report
+    - attendance for [Aug](month)
+    - check my attendance in [Sep](month)
+    - show me [Oct](month) attendance
+    - attendance for [Nov](month)
+    - report for [Dec](month)
+    - give me report for [1](month)
+    - show me [2nd](month) month report
+    - attendance for [3rd](month)
+    - give me [4th](month) attendance
+    - report for [5](month)
+    - show me [6th](month)
+    - attendance for [7](month)
+    - report for [8](month)
+    - show me [9](month) attendance
+    - attendance for [10th](month)
+    - report for [11](month)
+    - give me [12th](month) report
+
+
+
+
+# Synonyms help normalize user input
+- synonym: january
+  examples: |
+    - jan
+    - 1
+    - 1st
+    - first
+
+- synonym: february
+  examples: |
+    - feb
+    - 2
+    - 2nd
+    - second
+
+- synonym: march
+  examples: |
+    - mar
+    - 3
+    - 3rd
+    - third
+
+- synonym: april
+  examples: |
+    - apr
+    - 4
+    - 4th
+    - fourth
+
+- synonym: may
+  examples: |
+    - 5
+    - 5th
+    - fifth
+
+- synonym: june
+  examples: |
+    - jun
+    - 6
+    - 6th
+    - sixth
+
+- synonym: july
+  examples: |
+    - jul
+    - 7
+    - 7th
+    - seventh
+
+- synonym: august
+  examples: |
+    - aug
+    - 8
+    - 8th
+    - eighth
+
+- synonym: september
+  examples: |
+    - sept
+    - sep
+    - 9
+    - 9th
+    - ninth
+
+- synonym: october
+  examples: |
+    - oct
+    - 10
+    - 10th
+    - tenth
+
+- synonym: november
+  examples: |
+    - nov
+    - 11
+    - 11th
+    - eleventh
+
+- synonym: december
+  examples: |
+    - dec
+    - 12
+    - 12th
+    - twelfth
+
+# Regex pattern (extra safety, but synonyms handle most cases)
+- regex: month
+  examples: |
+    - (january|february|march|april|may|june|july|august|september|october|november|december)
+    - (jan|feb|mar|apr|may|jun|jul|aug|sept|oct|nov|dec)
+    - (1|2|3|4|5|6|7|8|9|10|11|12)
